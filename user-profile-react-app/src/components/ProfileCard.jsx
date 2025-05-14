@@ -1,14 +1,16 @@
 
-const ProfileCard = ({ name, age, bio }) => {
+const ProfileCard = props => {
    
+const { name, age, bio } = props.profile
+
     return(
         <div className="profile card">
             <p className = "profiles">
-                {name}
+                Name :  {name}
                 <br/>
-                {age}
+                Age :   {age}
                 <br />
-                {bio}
+                Bio :   {bio}
             </p>
         </div>
     )

@@ -18,7 +18,7 @@ const ProfileContainer = () => {
             id:3 ,
             name: "Ben",
             age: 39,
-            bio: "Doom and Pancake Enjoyer. Loves his child.",
+            bio: "Doom and pancake enjoyer. Loves his child.",
         },
         {
             id: 4,
@@ -28,12 +28,16 @@ const ProfileContainer = () => {
         }
     ]
 
-    
+    let profilecardJSX = profiles.map(profile => {
+       return <ProfileCard key={profile.id} profile={profile} />;
+});
     
 return(
 
-   profiles.map(profile => ProfileCard(profile))
-       
+   <div>
+   
+       {profilecardJSX}
+     </div> 
     )
 }
 
